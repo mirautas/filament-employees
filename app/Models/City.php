@@ -12,6 +12,9 @@ class City extends Model
 
     protected $fillable = ['state_id', 'name']; //create relationship
 
+
+
+
     public function state()
     {
         return $this->belongsTo(State::class);
@@ -21,5 +24,7 @@ class City extends Model
     {
         return $this->hasMany(Employee::class);
     }
+
+    
 
 }
